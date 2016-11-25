@@ -12,16 +12,17 @@ angular.module('myFirstApp', [])
     var item_num = 0;
     if ($scope.list_item != ""){
    item_num = calcStringItem($scope.list_item)
-    if (item_num > 3) $scope.message = "Too much";
-    if (item_num <= 3) $scope.message = "Good";
+    if (item_num > 3) $scope.message = "Too much!!!";
+    if (item_num <= 3) $scope.message = "Enjoy!";
     }
+    if ($scope.list_item == "") $scope.message = "Enter data first!";
   };
 
-function calcStringItem(string){
-var value = 0;
-var arrays = string.split(',');
-return value = arrays.length;
-};
+  function calcStringItem(string){
+    var value = 0;
+    var arrays = string.split(',');
+    return value = arrays.length;
+  };
 
 });
 
